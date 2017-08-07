@@ -13,11 +13,9 @@ const style = ({ detailsShown, detailsButtonClicked }) =>
       onClick={() => detailsButtonClicked()}
     >Details&nbsp;
       <svg>
-        {detailsShown &&
-          <path d="M0 0 L8 10 L16 0" />
-        }
-        {!detailsShown &&
-          <path d="M0 10 L8 0 L16 10" />
+        {detailsShown
+          ? <path d="M0 0 L8 10 L16 0" />
+          : <path d="M0 10 L8 0 L16 10" />
         }
       </svg>
     </div>

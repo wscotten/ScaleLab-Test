@@ -7,15 +7,9 @@ import './style.css';
 const style = ({ putResultStatus }) =>
   (putResultStatus !== null ?
     (<div className={'put-result-status-container'}>
-      {putResultStatus &&
-        <Alert bsStyle="success">
-        Success!
-        </Alert>
-      }
-      {!putResultStatus &&
-        <Alert bsStyle="danger">
-        Error!
-        </Alert>
+      {putResultStatus
+        ? <Alert bsStyle="success">Success!</Alert>
+        : <Alert bsStyle="danger">Error!</Alert>
       }
     </div>)
   : null);

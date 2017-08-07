@@ -6,8 +6,8 @@ import './style.css';
 
 const style = ({ attemptingSocialReachPut, socialReachModalValues, submitbuttonClicked }) =>
   (<button onClick={() => submitbuttonClicked(socialReachModalValues)} className={'modal-button'}>
-    {attemptingSocialReachPut &&
-      <div className="sk-fading-circle">
+    {attemptingSocialReachPut
+      ? <div className="sk-fading-circle">
         <div className="sk-circle1 sk-circle" />
         <div className="sk-circle2 sk-circle" />
         <div className="sk-circle3 sk-circle" />
@@ -21,9 +21,7 @@ const style = ({ attemptingSocialReachPut, socialReachModalValues, submitbuttonC
         <div className="sk-circle11 sk-circle" />
         <div className="sk-circle12 sk-circle" />
       </div>
-    }
-    {!attemptingSocialReachPut &&
-      <h3>Update</h3>
+      : <h3>Update</h3>
     }
   </button>);
 

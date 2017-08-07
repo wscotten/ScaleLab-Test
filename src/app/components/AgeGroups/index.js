@@ -16,7 +16,7 @@ const style = ({ barColors, ageGroups }) =>
   (<div className={'age-group-container'}>
     <h4>Age Groups</h4>
     <div className={'age-group-bar-container'}>
-      {ageGroups[13] && Object.keys(ageGroups).map(ageGroup =>
+      {Object.keys(ageGroups).map(ageGroup =>
         (<div key={ageGroup}>
           <p style={{ color: barColors[ageGroup] }}>
             {`${Math.round(ageGroups[ageGroup])}%`}

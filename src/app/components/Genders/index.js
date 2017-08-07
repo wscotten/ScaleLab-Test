@@ -7,7 +7,7 @@ const style = ({ barColors, genders }) =>
   (<div className={'genders-container'}>
     <h4>Genders</h4>
     <div className={'genders-bar-container'}>
-      {genders.male && Object.keys(genders).map(gender =>
+      {Object.keys(genders).map(gender =>
         (<div key={gender}>
           <p style={{ color: barColors[gender] }}>
             {`${Math.round(genders[gender])}%`}
