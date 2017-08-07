@@ -1,0 +1,6 @@
+.dashboard-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+}

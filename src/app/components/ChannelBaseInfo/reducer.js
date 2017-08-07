@@ -1,0 +1,32 @@
+export const GET_CHANNEL_INFO = 'GET_CHANNEL_INFO';
+
+export const getChannelInfo = payload => ({
+  type: GET_CHANNEL_INFO,
+  payload,
+});
+
+const channelBaseInfoReducer = (data = {}, { type, payload = {} }) => {
+  const { channels, channelStats } = payload;
+  switch (type) {
+    case GET_CHANNEL_INFO:
+      return {
+        name: channels.name,
+        status: channels.status,
+        youtube_channel_id: channels.youtube_channel_id,
+        total_views: channelStats.total_views,
+        subscribers: channelStats.subscribers,
+        videos: channelStats.videos,
+        last_month_views: channelStats.last_month_views,
+        network: channels.network,
+        joined_at: channels.joined_at,
+        owner: channels.owner,
+        category: channels.category,
+        commission: channels.commission,
+        country_id: channels.country_id,
+      };
+    default:
+      return data;
+  }
+};
+
+export default channelBaseInfoReducer;

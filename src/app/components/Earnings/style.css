@@ -1,0 +1,39 @@
+.earnings-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.earnings-container > h4 {
+  margin-bottom: 5px;
+}
+
+.earnings-bar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  min-width: 80px;
+  flex-wrap: wrap;
+}
+
+.earnings-bar-container p {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1000px) {
+  .earnings-bar-container > div {
+    flex-basis: 20%;
+  }
+
+  .earnings-container > h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 477px) {
+  .earnings-bar-container > div {
+    flex-basis: 33%;
+  }
+}

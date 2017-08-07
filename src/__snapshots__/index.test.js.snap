@@ -1,0 +1,712 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <div
+      className="dashboard-container"
+    >
+      <div
+        style={
+          Object {
+            "paddingLeft": 15,
+            "paddingRight": 15,
+          }
+        }
+      >
+        <h4>
+          Channels
+        </h4>
+      </div>
+      <div>
+        <div
+          className="channel-base-info-container"
+        >
+          <img
+            alt=""
+            src="ProfilePicture.png"
+          />
+          <div>
+            <div
+              className="channel-name-container"
+            >
+              <a
+                href="https://youtube.com/RetroSnickers"
+              >
+                RetroSnickers
+                   
+              </a>
+              <div
+                className="linked-status"
+                style={
+                  Object {
+                    "backgroundColor": "#80d324",
+                  }
+                }
+              >
+                linked
+              </div>
+              <p>
+                UCh8mkK_A3827d98sfslfa
+              </p>
+            </div>
+            <div
+              className="base-channel-youtube-stats-container"
+            >
+              <div
+                className="views-subs-videos-container"
+              >
+                <p>
+                  <strong>
+                    10M
+                  </strong>
+                   Views
+                </p>
+                <p>
+                  <strong>
+                    7.7k
+                  </strong>
+                   Subs
+                </p>
+                <p>
+                  <strong>
+                    95
+                  </strong>
+                   Videos
+                </p>
+              </div>
+              <div
+                className="current-month-views-container"
+              >
+                <p>
+                  <strong>
+                    990k
+                  </strong>
+                  <br />
+                   
+                  Jul
+                   Views
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="network-container"
+        >
+          <div>
+            <p>
+              <strong>
+                Network:
+              </strong>
+               
+              ScaleLab
+            </p>
+            <p>
+              <strong>
+                Joined:
+              </strong>
+               
+              Mar 23, 2013
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                Owner:
+              </strong>
+               
+              Scalelab Affiliate
+            </p>
+            <p>
+              <strong>
+                Category:
+              </strong>
+               
+              Entertainment
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                Commission:
+              </strong>
+               
+              50
+              %
+            </p>
+            <p>
+              <strong>
+                Country: 
+              </strong>
+              <img
+                alt=""
+                src="AmericanFlag.png"
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="details-button-container"
+      >
+        <div
+          className="detailsButton"
+          onClick={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          Details 
+          <svg>
+            <path
+              d="M0 0 L8 10 L16 0"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        className="channel-stats-container"
+      >
+        <div
+          className="social-reach-age-groups-genders-container"
+        >
+          <div
+            className="social-reach-container"
+          >
+            <div
+              className="social-reach-text"
+            >
+              <h4>
+                Social Reach 
+                9.9M
+              </h4>
+              <div
+                className="social-reach-edit-button"
+                onClick={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <h4>
+                  Edit
+                </h4>
+              </div>
+            </div>
+            <div
+              className="social-reach-bar-container"
+            >
+              <div
+                className="social-reach-bars"
+              >
+                <div>
+                  <img
+                    alt=""
+                    src="YoutubeLogo.png"
+                  />
+                </div>
+                <p>
+                  988k
+                </p>
+              </div>
+              <div
+                className="social-reach-bars"
+              >
+                <div>
+                  <img
+                    alt=""
+                    src="FacebookLogo.png"
+                  />
+                </div>
+                <p>
+                  100k
+                </p>
+              </div>
+              <div
+                className="social-reach-bars"
+              >
+                <div>
+                  <img
+                    alt=""
+                    src="VineLogo.png"
+                  />
+                </div>
+                <p>
+                  51k
+                </p>
+              </div>
+              <div
+                className="social-reach-bars"
+              >
+                <div>
+                  <img
+                    alt=""
+                    src="TwitterLogo.png"
+                  />
+                </div>
+                <p>
+                  13k
+                </p>
+              </div>
+              <div
+                className="social-reach-bars"
+              >
+                <div>
+                  <img
+                    alt=""
+                    src="InstagramLogo.png"
+                  />
+                </div>
+                <p>
+                  1.5k
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="age-group-container"
+          >
+            <h4>
+              Age Groups
+            </h4>
+            <div
+              className="age-group-bar-container"
+            >
+              <div>
+                <p
+                  style={
+                    Object {
+                      "color": "#f8e71c",
+                    }
+                  }
+                >
+                  10%
+                </p>
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#f8e71c",
+                      "height": 26.53333333333333,
+                      "margin": "auto",
+                      "width": 30,
+                    }
+                  }
+                />
+                <p>
+                  13-17
+                </p>
+              </div>
+              <div>
+                <p
+                  style={
+                    Object {
+                      "color": "#b9e986",
+                    }
+                  }
+                >
+                  30%
+                </p>
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#b9e986",
+                      "height": 40,
+                      "margin": "auto",
+                      "width": 30,
+                    }
+                  }
+                />
+                <p>
+                  18-24
+                </p>
+              </div>
+              <div>
+                <p
+                  style={
+                    Object {
+                      "color": "#7ed321",
+                    }
+                  }
+                >
+                  30%
+                </p>
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#7ed321",
+                      "height": 39.86666666666667,
+                      "margin": "auto",
+                      "width": 30,
+                    }
+                  }
+                />
+                <p>
+                  25-34
+                </p>
+              </div>
+              <div>
+                <p
+                  style={
+                    Object {
+                      "color": "#50e3c1",
+                    }
+                  }
+                >
+                  10%
+                </p>
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#50e3c1",
+                      "height": 26.733333333333334,
+                      "margin": "auto",
+                      "width": 30,
+                    }
+                  }
+                />
+                <p>
+                  35-34
+                </p>
+              </div>
+              <div>
+                <p
+                  style={
+                    Object {
+                      "color": "#1abbcf",
+                    }
+                  }
+                >
+                  8%
+                </p>
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#1abbcf",
+                      "height": 25.333333333333332,
+                      "margin": "auto",
+                      "width": 30,
+                    }
+                  }
+                />
+                <p>
+                  45-54
+                </p>
+              </div>
+              <div>
+                <p
+                  style={
+                    Object {
+                      "color": "#4a91e3",
+                    }
+                  }
+                >
+                  5%
+                </p>
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#4a91e3",
+                      "height": 23.266666666666666,
+                      "margin": "auto",
+                      "width": 30,
+                    }
+                  }
+                />
+                <p>
+                  55+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="genders-container"
+          >
+            <h4>
+              Genders
+            </h4>
+            <div
+              className="genders-bar-container"
+            >
+              <div>
+                <p
+                  style={
+                    Object {
+                      "color": "#1293f4",
+                    }
+                  }
+                >
+                  40%
+                </p>
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#1293f4",
+                      "height": 30.1,
+                      "margin": "auto",
+                      "width": 30,
+                    }
+                  }
+                />
+                <p>
+                  male
+                </p>
+              </div>
+              <div>
+                <p
+                  style={
+                    Object {
+                      "color": "#bd0de0",
+                    }
+                  }
+                >
+                  60%
+                </p>
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#bd0de0",
+                      "height": 39.9,
+                      "margin": "auto",
+                      "width": 30,
+                    }
+                  }
+                />
+                <p>
+                  female
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="earnings-container"
+        >
+          <h4>
+            Earnings
+          </h4>
+          <div
+            className="earnings-bar-container"
+          >
+            <div>
+              <p
+                style={
+                  Object {
+                    "color": "#1293f4",
+                  }
+                }
+              >
+                $12,000
+              </p>
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1293f4",
+                    "height": 30,
+                    "margin": "auto",
+                    "width": 30,
+                  }
+                }
+              />
+              <p>
+                Jun
+              </p>
+            </div>
+            <div>
+              <p
+                style={
+                  Object {
+                    "color": "#1293f4",
+                  }
+                }
+              >
+                $15,234
+              </p>
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1293f4",
+                    "height": 30,
+                    "margin": "auto",
+                    "width": 30,
+                  }
+                }
+              />
+              <p>
+                Jul
+              </p>
+            </div>
+            <div>
+              <p
+                style={
+                  Object {
+                    "color": "#1293f4",
+                  }
+                }
+              >
+                $22,213
+              </p>
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1293f4",
+                    "height": 30,
+                    "margin": "auto",
+                    "width": 30,
+                  }
+                }
+              />
+              <p>
+                Aug
+              </p>
+            </div>
+            <div>
+              <p
+                style={
+                  Object {
+                    "color": "#1293f4",
+                  }
+                }
+              >
+                $12,000
+              </p>
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1293f4",
+                    "height": 30,
+                    "margin": "auto",
+                    "width": 30,
+                  }
+                }
+              />
+              <p>
+                Sep
+              </p>
+            </div>
+            <div>
+              <p
+                style={
+                  Object {
+                    "color": "#1293f4",
+                  }
+                }
+              >
+                $15,234
+              </p>
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1293f4",
+                    "height": 30,
+                    "margin": "auto",
+                    "width": 30,
+                  }
+                }
+              />
+              <p>
+                Oct
+              </p>
+            </div>
+            <div>
+              <p
+                style={
+                  Object {
+                    "color": "#1293f4",
+                  }
+                }
+              >
+                $22,213
+              </p>
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1293f4",
+                    "height": 30,
+                    "margin": "auto",
+                    "width": 30,
+                  }
+                }
+              />
+              <p>
+                Nov
+              </p>
+            </div>
+            <div>
+              <p
+                style={
+                  Object {
+                    "color": "#1293f4",
+                  }
+                }
+              >
+                $49,876
+              </p>
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1293f4",
+                    "height": 45.156346545384565,
+                    "margin": "auto",
+                    "width": 30,
+                  }
+                }
+              />
+              <p>
+                Dec
+              </p>
+            </div>
+            <div>
+              <p
+                style={
+                  Object {
+                    "color": "#1293f4",
+                  }
+                }
+              >
+                $98,723
+              </p>
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1293f4",
+                    "height": 60,
+                    "margin": "auto",
+                    "width": 30,
+                  }
+                }
+              />
+              <p>
+                Jan
+              </p>
+            </div>
+            <div>
+              <p
+                style={
+                  Object {
+                    "color": "#1293f4",
+                  }
+                }
+              >
+                $10
+              </p>
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#1293f4",
+                    "height": 30,
+                    "margin": "auto",
+                    "width": 30,
+                  }
+                }
+              />
+              <p>
+                Feb
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

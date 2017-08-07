@@ -1,0 +1,12 @@
+.close-modal-button {
+  color: #d3d3d3;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

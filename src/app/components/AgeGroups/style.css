@@ -1,0 +1,34 @@
+.age-group-container {
+  display: flex;
+  width: 36%;
+  flex-direction: column;
+}
+
+.age-group-bar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.age-group-bar-container p {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 769px) {
+  .age-group-container {
+    width: 65%;
+  }
+
+  .age-group-container h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 477px) {
+  .age-group-container {
+    width: 100%;
+  }
+}

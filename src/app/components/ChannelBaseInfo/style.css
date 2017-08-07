@@ -1,0 +1,114 @@
+.channel-base-info-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+}
+
+.channel-base-info-container > div {
+  flex: 1;
+}
+
+.channel-base-info-container img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.channel-name-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.channel-name-container a {
+  font-size: 18px;
+  color: #2297ef;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.channel-name-container > .linked-status {
+  width: 50px;
+  height: 20px;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.channel-name-container p {
+  margin: 10px;
+  color: #a9a9a9;
+  font-weight: 100;
+}
+
+.network-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.network-container img {
+  height: 18px;
+}
+
+.base-channel-youtube-stats-container {
+  display: flex;
+}
+
+.views-subs-videos-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.current-month-views-container {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.current-month-views-container br {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .current-month-views-container {
+    flex: 1;
+  }
+}
+
+@media (max-width: 769px) {
+  .current-month-views-container {
+    flex: 0.5;
+  }
+}
+
+@media (max-width: 500px) {
+  .channel-name-container {
+    margin-bottom: 20px;
+  }
+
+  .channel-name-container p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 477px) {
+  .base-channel-youtube-stats-container {
+    margin-left: -60px;
+  }
+
+  .network-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 376px) {
+  .current-month-views-container br {
+    display: block;
+  }
+}

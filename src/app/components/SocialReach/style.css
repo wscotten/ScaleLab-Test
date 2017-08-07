@@ -1,0 +1,50 @@
+.social-reach-container {
+  display: flex;
+  width: 36%;
+  flex-direction: column;
+}
+
+.social-reach-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-reach-bar-container {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.social-reach-bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social-reach-bars > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.social-reach-bars img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-reach-bars p {
+  font-size: 18px;
+  margin: 0;
+}
+
+@media (max-width: 769px) {
+  .social-reach-container {
+    width: 100%;
+    height: 114px;
+  }
+
+  .social-reach-text {
+    margin-bottom: 20px;
+  }
+}

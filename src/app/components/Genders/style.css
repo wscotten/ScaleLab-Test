@@ -1,0 +1,34 @@
+.genders-container {
+  display: flex;
+  width: 12%;
+  flex-direction: column;
+}
+
+.genders-bar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.genders-bar-container p {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 769px) {
+  .genders-container {
+    width: 25%;
+  }
+
+  .genders-container h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 477px) {
+  .genders-container {
+    width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+.put-result-status-container {
+  width: 80%;
+}
+
+.put-result-status-container .alert {
+  height: 35px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

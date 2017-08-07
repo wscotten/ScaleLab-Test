@@ -1,0 +1,44 @@
+{
+  "name": "scalelabtest",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://williamscotten.com/scalelab_test",
+  "devDependencies": {
+    "chromedriver": "^2.31.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.4",
+    "nightwatch": "^0.9.16",
+    "nock": "^9.0.14",
+    "react-test-renderer": "^15.6.1",
+    "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.2.3",
+    "selenium-download": "^2.0.10",
+    "selenium-server-standalone-jar": "^3.4.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.18.1",
+    "node-sass-chokidar": "0.0.3",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.2",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-scripts": "1.0.10",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
