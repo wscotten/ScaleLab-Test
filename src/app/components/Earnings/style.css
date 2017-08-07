@@ -11,14 +11,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  min-width: 80px;
   flex-wrap: wrap;
-}
-
-.earnings-bar-container p {
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 @media (max-width: 1000px) {

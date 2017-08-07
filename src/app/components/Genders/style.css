@@ -10,12 +10,6 @@
   align-items: flex-end;
 }
 
-.genders-bar-container p {
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 @media (max-width: 769px) {
   .genders-container {
     width: 25%;
