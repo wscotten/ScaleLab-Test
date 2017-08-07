@@ -16,6 +16,8 @@ const Bar = ({ topText, bottomText, height, backgroundColor }) =>
   </div>);
 
 Bar.propTypes = {
+  topText: PropTypes.string.isRequired,
+  bottomText: PropTypes.string.isRequired,
   height: PropTypes.number.isRequired,
   backgroundColor: PropTypes.string.isRequired,
 };
