@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Bar from '../Bar';
 import './style.css';
+
 
 const ageGroupConverter = {
   13: '13-17',
@@ -17,20 +19,13 @@ const style = ({ barColors, ageGroups }) =>
     <h4>Age Groups</h4>
     <div className={'age-group-bar-container'}>
       {Object.keys(ageGroups).map(ageGroup =>
-        (<div key={ageGroup}>
-          <p style={{ color: barColors[ageGroup] }}>
-            {`${Math.round(ageGroups[ageGroup])}%`}
-          </p>
-          <div
-            style={{
-              height: ageGroups[ageGroup] > 30 ? 40 : 20 + ((2 / 3) * ageGroups[ageGroup]),
-              width: 30,
-              margin: 'auto',
-              backgroundColor: barColors[ageGroup],
-            }}
-          />
-          <p>{ageGroupConverter[ageGroup]}</p>
-        </div>),
+        (<Bar
+          key={ageGroup}
+          topText={`${Math.round(ageGroups[ageGroup])}%`}
+          bottomText={ageGroupConverter[ageGroup]}
+          height={ageGroups[ageGroup] > 30 ? 40 : 20 + ((2 / 3) * ageGroups[ageGroup])}
+          backgroundColor={barColors[ageGroup]}
+        />),
       )}
     </div>
   </div>);

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Bar from '../Bar';
 import './style.css';
 
 const months = [
@@ -19,20 +20,13 @@ const style = ({ barColor, monthsToShow, earnings }) => {
       <h4>Earnings</h4>
       <div className={'earnings-bar-container'}>
         {earnings.slice(earnings.length - monthsToShow).map(({ month, gross, id }) =>
-          (<div key={id}>
-            <p style={{ color: barColor }}>
-              {`$${gross.toLocaleString()}`}
-            </p>
-            <div
-              style={{
-                height: grossToHeightConverter(gross, highestMonth),
-                width: 30,
-                margin: 'auto',
-                backgroundColor: barColor,
-              }}
-            />
-            <p>{months[month - 1]}</p>
-          </div>),
+          (<Bar
+            key={id}
+            topText={`$${gross.toLocaleString()}`}
+            bottomText={months[month - 1]}
+            height={grossToHeightConverter(gross, highestMonth)}
+            backgroundColor={barColor}
+          />),
         )}
       </div>
     </div>
