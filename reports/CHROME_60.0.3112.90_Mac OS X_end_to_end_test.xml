@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="1">
+            tests="2">
 
   <testsuite name="end_to_end_test"
     errors="0" failures="0" hostname="" id="" package="end_to_end_test" skipped="0"
-    tests="1" time="4.873" timestamp="Tue, 08 Aug 2017 03:50:06 GMT">
+    tests="2" time="4.834" timestamp="Tue, 08 Aug 2017 05:28:17 GMT">
   
-    <testcase name="End to End Test Project" classname="end_to_end_test" time="4.873" assertions="10">
+    <testcase name="Make sure the data is displayed." classname="end_to_end_test" time="3.088" assertions="54">
 
     
 
@@ -22,6 +22,103 @@
     
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Make sure the details button functions correctly" classname="end_to_end_test" time="1.746" assertions="3">
 
     
 
