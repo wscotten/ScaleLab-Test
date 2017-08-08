@@ -9,10 +9,7 @@ const months = [
   'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'n/a',
 ];
 
-const grossToHeightConverter = (currentMonth, highestMonth) =>
-  (currentMonth / highestMonth < 0.5 ? 30 : 30 + ((currentMonth / highestMonth) * 30));
-
-const style = ({ barColor, monthsToShow, earnings }) => {
+const style = ({ barColor, earnings }) => {
   const grossPerMonthArray = earnings.map(month => month.gross);
   const highestMonth = Math.max(...grossPerMonthArray);
   return (
@@ -24,7 +21,7 @@ const style = ({ barColor, monthsToShow, earnings }) => {
             key={id}
             topText={`$${gross.toLocaleString()}`}
             bottomText={months[month - 1]}
-            height={grossToHeightConverter(gross, highestMonth)}
+            height={Math.ceil(gross === highestMonth ? 50 : (gross / highestMonth) * 50)}
             backgroundColor={barColor}
           />),
         )}
@@ -35,7 +32,6 @@ const style = ({ barColor, monthsToShow, earnings }) => {
 
 style.propTypes = {
   barColor: PropTypes.string.isRequired,
-  monthsToShow: PropTypes.number.isRequired,
   earnings: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     channel_id: PropTypes.number.isRequired,

@@ -13,7 +13,7 @@ const style = ({ barColors, genders }) =>
           key={gender}
           topText={`${Math.round(genders[gender])}%`}
           bottomText={gender}
-          height={genders[gender] > 60 ? 40 : 10 + ((1 / 2) * genders[gender])}
+          height={Math.ceil(genders[gender] > 50 ? 50 : genders[gender])}
           backgroundColor={barColors[gender]}
         />),
       )}

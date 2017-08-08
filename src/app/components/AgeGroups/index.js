@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Bar from '../Bar';
 import './style.css';
 
-
 const ageGroupConverter = {
   13: '13-17',
   18: '18-24',
@@ -23,7 +22,7 @@ const style = ({ barColors, ageGroups }) =>
           key={ageGroup}
           topText={`${Math.round(ageGroups[ageGroup])}%`}
           bottomText={ageGroupConverter[ageGroup]}
-          height={ageGroups[ageGroup] > 30 ? 40 : 20 + ((2 / 3) * ageGroups[ageGroup])}
+          height={Math.ceil(ageGroups[ageGroup] > 50 ? 50 : ageGroups[ageGroup])}
           backgroundColor={barColors[ageGroup]}
         />),
       )}
