@@ -5,7 +5,7 @@ import { createSelector } from 'reselect';
 import CloseModalButton from '../CloseModalButton';
 import PutResultStatusBar from '../../components/PutResultStatusBar';
 import SocialReachModalButton from '../SocialReachModalButton';
-import { updateSocialReachModal } from './reducer';
+import { updateSocialReachModal } from './actions';
 import { logoArray } from '../../components/SocialReach';
 import { closeSocialReachModal } from '../SocialReachEditButton/actions';
 import { attemptToPutNewSocialReachInfo } from '../SocialReachModalButton/reducer';
