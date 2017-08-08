@@ -1,4 +1,3 @@
-// import fetch from 'isomorphic-fetch';
 import {
   CURRENTLY_ATTEMPTING_PUT,
   PUT_SOCIAL_REACH_INFO_SUCCESS,
