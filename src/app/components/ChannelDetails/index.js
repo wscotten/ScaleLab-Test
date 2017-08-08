@@ -9,12 +9,13 @@ import './style.css';
 
 export const MONTHS_TO_SHOW = 9;
 
-const style = ({ detailsShown }) =>
+const style = ({ detailsShown, ageGroups }) =>
   (detailsShown
   ? (<div className={'channel-stats-container'}>
     <div className={'social-reach-age-groups-genders-container'}>
       <SocialReach />
       <AgeGroups
+        ageGroups={ageGroups}
         barColors={{
           13: '#f8e71c',
           18: '#b9e986',
@@ -34,7 +35,8 @@ style.propTypes = {
   detailsShown: PropTypes.bool.isRequired,
 };
 
-const mapStateToProps = ({ detailsShown }) => ({
+const mapStateToProps = ({ detailsShown, ageGroups }) => ({
+  ageGroups,
   detailsShown,
 });
 

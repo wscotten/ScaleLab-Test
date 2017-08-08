@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import Bar from '../Bar';
 import './style.css';
 
@@ -13,7 +12,7 @@ const ageGroupConverter = {
   55: '55+',
 };
 
-const style = ({ barColors, ageGroups }) =>
+const AgeGroups = ({ barColors, ageGroups }) =>
   (<div className={'age-group-container'}>
     <h4>Age Groups</h4>
     <div className={'age-group-bar-container'}>
@@ -29,7 +28,7 @@ const style = ({ barColors, ageGroups }) =>
     </div>
   </div>);
 
-style.propTypes = {
+AgeGroups.propTypes = {
   barColors: PropTypes.shape({
     13: PropTypes.string.isRequired,
     18: PropTypes.string.isRequired,
@@ -47,13 +46,5 @@ style.propTypes = {
     55: PropTypes.number.isRequired,
   }).isRequired,
 };
-
-const mapStateToProps = ({ ageGroups }) => ({
-  ageGroups,
-});
-
-const AgeGroups = connect(
-  mapStateToProps,
-)(style);
 
 export default AgeGroups;

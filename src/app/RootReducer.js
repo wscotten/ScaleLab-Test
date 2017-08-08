@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import channelBaseInfo from './components/ChannelBaseInfo/reducer';
-import ageGroups from './components/AgeGroups/reducer';
+import ageGroups from './components/ChannelDetails/reducer';
 import socialReach from './components/SocialReach/reducer';
 import genders from './components/Genders/reducer';
 import earnings from './components/Earnings/reducer';
