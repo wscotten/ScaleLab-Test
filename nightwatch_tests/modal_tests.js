@@ -33,7 +33,7 @@ module.exports = {
       .click('.modal-button')
       .waitForElementPresent('.modal-button > h3', 3000)
       .getText('.social-reach-bars:nth-of-type(1)', (result) => {
-        browser.assert.equal(result.value, '9.9M');
+        browser.assert.equal(result.value, '9.9m');
       })
       .end();
   },

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import numeral from 'numeral';
 import YoutubeLogo from '../../images/YoutubeLogo.png';
 import FacebookLogo from '../../images/FacebookLogo.png';
 import VineLogo from '../../images/VineLogo.png';
@@ -19,17 +20,17 @@ export const logoArray = {
 
 export const numberFormatter = (number) => {
   if (number > 949999999) {
-    return `${(number / 1000000000).toFixed(0)}B`;
+    return numeral(number).format('0a');
   } else if (number > 994999999) {
-    return `${(number / 1000000000).toFixed(1)}B`;
+    return numeral(number).format('0.0a');
   } else if (number > 9949999) {
-    return `${(number / 1000000).toFixed(0)}M`;
+    return numeral(number).format('0a');
   } else if (number > 994999) {
-    return `${(number / 1000000).toFixed(1)}M`;
+    return numeral(number).format('0.0a');
   } else if (number > 9949) {
-    return `${(number / 1000).toFixed(0)}k`;
+    return numeral(number).format('0a');
   } else if (number > 999) {
-    return `${(number / 1000).toFixed(1)}k`;
+    return numeral(number).format('0.0a');
   }
   return number;
 };

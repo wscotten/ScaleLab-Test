@@ -3,11 +3,11 @@
             failures="0"
             tests="1">
 
-  <testsuite name="loaded_correct_data"
-    errors="0" failures="0" hostname="" id="" package="loaded_correct_data" skipped="0"
-    tests="1" time="3.176" timestamp="Tue, 08 Aug 2017 05:58:35 GMT">
+  <testsuite name="temp.loaded_correct_data"
+    errors="0" failures="0" hostname="" id="" package="temp" skipped="0"
+    tests="1" time="2.916" timestamp="Tue, 08 Aug 2017 05:55:56 GMT">
   
-    <testcase name="Make sure the data is displayed." classname="loaded_correct_data" time="3.176" assertions="54">
+    <testcase name="Make sure the data is displayed." classname="temp.loaded_correct_data" time="2.916" assertions="54">
 
     
 

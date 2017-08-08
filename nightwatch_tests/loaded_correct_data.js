@@ -1,5 +1,5 @@
 const VIEWS_SUBS_VIDEOS = [
-  '10M Views',
+  '10m Views',
   '7.7k Subs',
   '95 Videos',
 ];
@@ -68,7 +68,7 @@ module.exports = {
         });
       })
       .getText('.social-reach-text > h4', (result) => {
-        browser.assert.equal(result.value, 'Social Reach 9.9M');
+        browser.assert.equal(result.value, 'Social Reach 9.9m');
       })
       .elements('class name', 'social-reach-bars', (elements) => {
         elements.value.forEach((element, i) => {
