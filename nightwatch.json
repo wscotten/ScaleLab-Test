@@ -1,5 +1,5 @@
 {
-  "src_folders" : ["tests"],
+  "src_folders" : ["nightwatch_tests"],
   "output_folder" : "reports",
   "globals_path" : "./lib/external_globals.js",
   "selenium" : {
