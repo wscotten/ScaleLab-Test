@@ -3,6 +3,7 @@ module.exports = {
     browser
       .url('http://localhost:3000/')
       .waitForElementPresent('.channel-stats-container', 2000)
+      .pause(500)
       .click('.social-reach-edit-button')
       .waitForElementPresent('.modal-box', 1000)
       .click('.close-modal-button')
@@ -17,6 +18,7 @@ module.exports = {
   'Make sure the modal updates properly': (browser) => {
     browser
       .url('http://localhost:3000/')
+      .pause(500)
       .waitForElementPresent('.channel-stats-container', 2000)
       .getText('.social-reach-bars:nth-of-type(1)', (result) => {
         browser.assert.equal(result.value, '988k');

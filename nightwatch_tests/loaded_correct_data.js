@@ -41,6 +41,7 @@ module.exports = {
     browser
       .url('http://localhost:3000/')
       .waitForElementPresent('.channel-stats-container', 2000)
+      .pause(500)
       .getText('.channel-name-container > a', (result) => {
         browser.assert.equal(result.value, 'RetroSnickers   ');
       })
