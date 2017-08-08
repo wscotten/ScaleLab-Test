@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const BarText = ({ color = '#333', text }) =>
+const BarText = ({ color, text }) =>
   (<p
     style={{
       textAlign: 'center',
@@ -13,8 +13,12 @@ const BarText = ({ color = '#333', text }) =>
   </p>);
 
 BarText.propTypes = {
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
   text: PropTypes.string.isRequired,
+};
+
+BarText.defaultProps = {
+  color: '#333',
 };
 
 const Bar = ({ topText, bottomText, height, backgroundColor }) =>
