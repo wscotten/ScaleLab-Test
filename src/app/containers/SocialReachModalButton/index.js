@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { attemptToPutNewSocialReachInfo } from './reducer';
+import { attemptToPutNewSocialReachInfo } from './actions';
 import './style.css';
 
 const style = ({ attemptingSocialReachPut, socialReachModalValues, submitbuttonClicked }) =>

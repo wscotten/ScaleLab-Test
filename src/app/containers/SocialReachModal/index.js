@@ -8,7 +8,7 @@ import SocialReachModalButton from '../SocialReachModalButton';
 import { updateSocialReachModal } from './actions';
 import { logoArray } from '../../components/SocialReach';
 import { closeSocialReachModal } from '../SocialReachEditButton/actions';
-import { attemptToPutNewSocialReachInfo } from '../SocialReachModalButton/reducer';
+import { attemptToPutNewSocialReachInfo } from '../SocialReachModalButton/actions';
 import './style.css';
 
 const handleClick = ({ target, currentTarget }, closeModalButtonClicked) => {

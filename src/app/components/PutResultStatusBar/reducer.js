@@ -1,7 +1,7 @@
 import {
   PUT_SOCIAL_REACH_INFO_FAIL,
   PUT_SOCIAL_REACH_INFO_SUCCESS,
-} from '../../containers/SocialReachModalButton/reducer';
+} from '../../containers/SocialReachModalButton/constants';
 import { CLOSE_SOCIAL_REACH_MODAL } from '../../containers/SocialReachEditButton/constants';
 
 const putResultStatusReducer = (putStatusResult = null, { type }) => {

@@ -1,5 +1,5 @@
 import { GET_CHANNEL_INFO } from '../ChannelBaseInfo/constants';
-import { PUT_SOCIAL_REACH_INFO_SUCCESS } from '../../containers/SocialReachModalButton/reducer';
+import { PUT_SOCIAL_REACH_INFO_SUCCESS } from '../../containers/SocialReachModalButton/constants';
 import { MONTHS_TO_SHOW } from '../ChannelDetails';
 
 export const extractSocialReachNumbers = payload => ({
