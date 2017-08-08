@@ -2,7 +2,7 @@
   "name": "scalelabtest",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://williamscotten.com/scalelab_test",
+  "homepage": "",
   "devDependencies": {
     "chromedriver": "^2.31.0",
     "eslint": "^3.19.0",
