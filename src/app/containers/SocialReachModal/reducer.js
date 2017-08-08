@@ -1,4 +1,4 @@
-import { GET_CHANNEL_INFO } from '../../components/ChannelBaseInfo/reducer';
+import { GET_CHANNEL_INFO } from '../../components/ChannelBaseInfo/constants';
 import { extractSocialReachNumbers } from '../../components/ChannelDetails/reducer';
 
 export const UPDATE_SOCIAL_REACH_MODAL = 'UPDATE_SOCIAL_REACH_MODAL';

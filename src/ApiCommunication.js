@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch';
-import { getChannelInfo } from './app/components/ChannelBaseInfo/reducer';
+import { getChannelInfo } from './app/components/ChannelBaseInfo/actions';
 import store from './index';
 
 const fallBackData = {

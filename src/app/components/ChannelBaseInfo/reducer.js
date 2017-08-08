@@ -1,9 +1,4 @@
-export const GET_CHANNEL_INFO = 'GET_CHANNEL_INFO';
-
-export const getChannelInfo = payload => ({
-  type: GET_CHANNEL_INFO,
-  payload,
-});
+import { GET_CHANNEL_INFO } from './constants';
 
 const channelBaseInfoReducer = (data = {}, { type, payload = {} }) => {
   const { channels, channelStats } = payload;
