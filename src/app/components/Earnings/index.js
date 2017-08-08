@@ -19,7 +19,7 @@ const style = ({ barColor, monthsToShow, earnings }) => {
     <div className={'earnings-container'}>
       <h4>Earnings</h4>
       <div className={'earnings-bar-container'}>
-        {earnings.slice(earnings.length - monthsToShow).map(({ month, gross, id }) =>
+        {earnings.map(({ month, gross, id }) =>
           (<Bar
             key={id}
             topText={`$${gross.toLocaleString()}`}
