@@ -1,4 +1,4 @@
-export const TOGGLE_DETAILS_BUTTON = 'TOGGLE_DETAILS_BUTTON';
+import { TOGGLE_DETAILS_BUTTON } from './constants';
 
 export const toggleDetailsButton = () => ({
   type: TOGGLE_DETAILS_BUTTON,

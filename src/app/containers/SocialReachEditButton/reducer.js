@@ -1,13 +1,4 @@
-export const TOGGLE_SOCIAL_REACH_MODAL = 'TOGGLE_SOCIAL_REACH_MODAL';
-export const CLOSE_SOCIAL_REACH_MODAL = 'CLOSE_SOCIAL_REACH_MODAL';
-
-export const toggleSocialReachModal = () => ({
-  type: TOGGLE_SOCIAL_REACH_MODAL,
-});
-
-export const closeSocialReachModal = () => ({
-  type: CLOSE_SOCIAL_REACH_MODAL,
-});
+import { TOGGLE_SOCIAL_REACH_MODAL, CLOSE_SOCIAL_REACH_MODAL } from './constants';
 
 const ageGroupsReducer = (editSocialReachModalShown = false, { type }) => {
   switch (type) {

@@ -7,7 +7,7 @@ import PutResultStatusBar from '../../components/PutResultStatusBar';
 import SocialReachModalButton from '../SocialReachModalButton';
 import { updateSocialReachModal } from './reducer';
 import { logoArray } from '../../components/SocialReach';
-import { closeSocialReachModal } from '../SocialReachEditButton/reducer';
+import { closeSocialReachModal } from '../SocialReachEditButton/actions';
 import { attemptToPutNewSocialReachInfo } from '../SocialReachModalButton/reducer';
 import './style.css';
 

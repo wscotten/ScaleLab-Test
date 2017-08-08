@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './style.css';
-import { toggleDetailsButton } from './reducer';
+import { toggleDetailsButton } from './actions';
 
 const style = ({ detailsShown, detailsButtonClicked }) =>
   (<div className={'details-button-container'}>
