@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { createSelector } from 'reselect';
 import CloseModalButton from '../CloseModalButton';
 import PutResultStatusBar from '../../components/PutResultStatusBar';
 import SocialReachModalButton from '../SocialReachModalButton';
@@ -45,19 +46,20 @@ const style = ({
             onChange={value => modalValueChanged('total', value.target.value)}
           />
         </div>
-        {Object.keys(logoArray).map(platform =>
-          (
+        {Object.keys(logoArray).map(platform => {
+          console.log(platform);
+          return (
             <div key={platform} className={'modal-contents'}>
               <img alt="" src={logoArray[platform]} />
               <input
                 type="text"
                 max="100000000"
                 value={socialReachModalValues[platform]}
-                onChange={value => modalValueChanged(platform, value.target.value)}
+                onChange={modalValueChanged(platform)}
               />
             </div>
-          ),
-        )}
+          );
+        })}
         <SocialReachModalButton />
       </form>
     </div>
@@ -85,8 +87,8 @@ const mapStateToProps = ({ editSocialReachModalShown, socialReachModalValues }) 
 });
 
 const mapDispatchToProps = dispatch => ({
-  modalValueChanged: (platform, value) => {
-    dispatch(updateSocialReachModal(platform, value));
+  modalValueChanged: platform => (value) => {
+    dispatch(updateSocialReachModal(platform, value.target.value));
   },
   closeModalButtonClicked: () => {
     dispatch(closeSocialReachModal());

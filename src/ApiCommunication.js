@@ -69,15 +69,19 @@ export default async function getJSONFromApi() {
     fetch('https://s3-us-west-1.amazonaws.com/scalelab-test/channel-stats.json'),
     fetch('https://s3-us-west-1.amazonaws.com/scalelab-test/earnings.json'),
   ]);
-  const [channelData, channelStats, channelEarnings] = await Promise.all([
+  const [channelData, channelStatsData, channelEarnings] = await Promise.all([
     getResponse(response, 'channelData'),
     getResponse(response2, 'channelStats'),
     getResponse(response3, 'channelEarnings'),
   ]);
+  const channelID = channelData.data[0].id;
+  const channels = channelData.data.find(channel => channel.id === channelID);
+  const channelStats = channelStatsData.data.find(channel => channel.channel_id === channelID);
+  const earnings = channelEarnings.data.filter(month => month.channel_id === channelID);
   const payload = {
-    channels: channelData.data[0],
-    channelStats: channelStats.data[0],
-    earnings: channelEarnings.data,
+    channels,
+    channelStats,
+    earnings,
   };
   store.dispatch(getChannelInfo(payload));
 }
