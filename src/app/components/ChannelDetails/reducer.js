@@ -1,12 +1,18 @@
 import { GET_CHANNEL_INFO } from '../ChannelBaseInfo/reducer';
 
-const ageGroupsReducer = (data = {}, { type, payload }) => {
+const channelDetailsReducer = (data = {}, { type, payload }) => {
   switch (type) {
     case GET_CHANNEL_INFO:
-      return JSON.parse(payload.channelStats.age_groups);
+      return {
+        ageGroups: JSON.parse(payload.channelStats.age_groups),
+        genders: {
+          male: payload.channelStats.male_ratio,
+          female: payload.channelStats.female_ratio,
+        },
+      };
     default:
       return data;
   }
 };
 
-export default ageGroupsReducer;
+export default channelDetailsReducer;

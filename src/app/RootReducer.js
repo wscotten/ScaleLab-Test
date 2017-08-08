@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
 import channelBaseInfo from './components/ChannelBaseInfo/reducer';
-import ageGroups from './components/ChannelDetails/reducer';
+import channelDetails from './components/ChannelDetails/reducer';
 import socialReach from './components/SocialReach/reducer';
-import genders from './components/Genders/reducer';
 import earnings from './components/Earnings/reducer';
 import detailsShown from './containers/DetailsButton/reducer';
 import editSocialReachModalShown from './containers/SocialReachEditButton/reducer';
@@ -12,9 +11,8 @@ import putResultStatus from './components/PutResultStatusBar/reducer';
 
 export default combineReducers({
   channelBaseInfo,
-  ageGroups,
+  channelDetails,
   socialReach,
-  genders,
   earnings,
   detailsShown,
   editSocialReachModalShown,

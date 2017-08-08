@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import Bar from '../Bar';
 import './style.css';
 
-const style = ({ barColors, genders }) =>
+const Genders = ({ barColors, genders }) =>
   (<div className={'genders-container'}>
     <h4>Genders</h4>
     <div className={'genders-bar-container'}>
@@ -20,7 +19,7 @@ const style = ({ barColors, genders }) =>
     </div>
   </div>);
 
-style.propTypes = {
+Genders.propTypes = {
   barColors: PropTypes.shape({
     male: PropTypes.string.isRequired,
     female: PropTypes.string.isRequired,
@@ -30,13 +29,5 @@ style.propTypes = {
     female: PropTypes.number.isRequired,
   }).isRequired,
 };
-
-const mapStateToProps = ({ genders }) => ({
-  genders,
-});
-
-const Genders = connect(
-  mapStateToProps,
-)(style);
 
 export default Genders;

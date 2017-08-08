@@ -9,13 +9,13 @@ import './style.css';
 
 export const MONTHS_TO_SHOW = 9;
 
-const style = ({ detailsShown, ageGroups }) =>
+const style = ({ detailsShown, channelDetails }) =>
   (detailsShown
   ? (<div className={'channel-stats-container'}>
     <div className={'social-reach-age-groups-genders-container'}>
       <SocialReach />
       <AgeGroups
-        ageGroups={ageGroups}
+        ageGroups={channelDetails.ageGroups}
         barColors={{
           13: '#f8e71c',
           18: '#b9e986',
@@ -25,7 +25,7 @@ const style = ({ detailsShown, ageGroups }) =>
           55: '#4a91e3',
         }}
       />
-      <Genders barColors={{ male: '#1293f4', female: '#bd0de0' }} />
+      <Genders genders={channelDetails.genders} barColors={{ male: '#1293f4', female: '#bd0de0' }} />
     </div>
     <Earnings barColor={'#1293f4'} monthsToShow={MONTHS_TO_SHOW} />
   </div>)
@@ -35,8 +35,8 @@ style.propTypes = {
   detailsShown: PropTypes.bool.isRequired,
 };
 
-const mapStateToProps = ({ detailsShown, ageGroups }) => ({
-  ageGroups,
+const mapStateToProps = ({ detailsShown, channelDetails }) => ({
+  channelDetails,
   detailsShown,
 });
 
