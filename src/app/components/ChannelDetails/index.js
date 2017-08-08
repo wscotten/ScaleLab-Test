@@ -13,7 +13,7 @@ const style = ({ detailsShown, channelDetails }) =>
   (detailsShown
   ? (<div className={'channel-stats-container'}>
     <div className={'social-reach-age-groups-genders-container'}>
-      <SocialReach />
+      <SocialReach socialReach={channelDetails.socialReach} />
       <AgeGroups
         ageGroups={channelDetails.ageGroups}
         barColors={{
@@ -25,9 +25,16 @@ const style = ({ detailsShown, channelDetails }) =>
           55: '#4a91e3',
         }}
       />
-      <Genders genders={channelDetails.genders} barColors={{ male: '#1293f4', female: '#bd0de0' }} />
+      <Genders
+        genders={channelDetails.genders}
+        barColors={{ male: '#1293f4', female: '#bd0de0' }}
+      />
     </div>
-    <Earnings barColor={'#1293f4'} monthsToShow={MONTHS_TO_SHOW} />
+    <Earnings
+      earnings={channelDetails.earnings}
+      barColor={'#1293f4'}
+      monthsToShow={MONTHS_TO_SHOW}
+    />
   </div>)
   : null);
 

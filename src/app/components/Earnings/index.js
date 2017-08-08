@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import Bar from '../Bar';
 import './style.css';
 
@@ -9,7 +8,7 @@ const months = [
   'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'n/a',
 ];
 
-const style = ({ barColor, earnings }) => {
+const Earnings = ({ barColor, earnings }) => {
   const grossPerMonthArray = earnings.map(month => month.gross);
   const highestMonth = Math.max(...grossPerMonthArray);
   return (
@@ -30,7 +29,7 @@ const style = ({ barColor, earnings }) => {
   );
 };
 
-style.propTypes = {
+Earnings.propTypes = {
   barColor: PropTypes.string.isRequired,
   earnings: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -40,14 +39,5 @@ style.propTypes = {
     gross: PropTypes.number.isRequired,
   })).isRequired,
 };
-
-const mapStateToProps = ({ earnings }) => ({
-  earnings,
-});
-
-const Earnings = connect(
-  mapStateToProps,
-  null,
-)(style);
 
 export default Earnings;

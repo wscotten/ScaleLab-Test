@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import numeral from 'numeral';
 import YoutubeLogo from '../../images/YoutubeLogo.png';
 import FacebookLogo from '../../images/FacebookLogo.png';
@@ -35,7 +34,7 @@ export const numberFormatter = (number) => {
   return number;
 };
 
-const style = ({ socialReach }) =>
+const SocialReach = ({ socialReach }) =>
   (<div className={'social-reach-container'}>
     <div className={'social-reach-text'}>
       <h4>Social Reach {numberFormatter(socialReach.total)}</h4>
@@ -53,7 +52,7 @@ const style = ({ socialReach }) =>
     </div>
   </div>);
 
-style.propTypes = {
+SocialReach.propTypes = {
   socialReach: PropTypes.shape({
     total: PropTypes.number.isRequired,
     Youtube: PropTypes.number.isRequired,
@@ -63,14 +62,5 @@ style.propTypes = {
     Instagram: PropTypes.number.isRequired,
   }).isRequired,
 };
-
-const mapStateToProps = ({ socialReach }) => ({
-  socialReach,
-});
-
-const SocialReach = connect(
-  mapStateToProps,
-  null,
-)(style);
 
 export default SocialReach;
