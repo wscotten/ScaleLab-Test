@@ -15,6 +15,7 @@ const countryArray = {
 // that changed it for me so this ugly function makes it presentable.
 const convertTimeToCorrectDate = (time) => {
   if (time === 'n/a') return 'n/a';
+  if (!time) return '';
   const timeString = time.split(' ');
   const dateString = timeString[0].split('-');
   const hourString = Number(timeString[1].split(':')[0]);

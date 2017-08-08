@@ -1,6 +1,22 @@
 import { GET_CHANNEL_INFO } from './constants';
 
-const channelBaseInfoReducer = (data = {}, { type, payload = {} }) => {
+const initialData = {
+  name: '',
+  status: 'linked',
+  youtube_channel_id: '',
+  total_views: '',
+  subscribers: '',
+  videos: '',
+  last_month_views: '',
+  network: '',
+  joined_at: '',
+  owner: '',
+  category: '',
+  commission: '',
+  country_id: '',
+};
+
+const channelBaseInfoReducer = (data = initialData, { type, payload = {} }) => {
   const { channels, channelStats } = payload;
   switch (type) {
     case GET_CHANNEL_INFO:

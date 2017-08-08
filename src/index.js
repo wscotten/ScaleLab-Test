@@ -31,15 +31,14 @@ const store = createStore(
   composeEnhancers(applyMiddleware(...middlewares)),
 );
 
-(async function wait() {
-  await getJSONFromApi();
-  ReactDOM.render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-    document.getElementById('root'),
-  );
-}());
+getJSONFromApi();
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+);
 
 registerServiceWorker();
 

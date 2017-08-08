@@ -11,7 +11,38 @@ export const extractSocialReachNumbers = payload => ({
   Instagram: payload.channelStats.instagram_reach,
 });
 
-const channelDetailsReducer = (data = {}, { type, payload }) => {
+const initialData = {
+  ageGroups: {
+    13: '',
+    18: '',
+    25: '',
+    35: '',
+    45: '',
+    55: '',
+  },
+  genders: {
+    male: '',
+    female: '',
+  },
+  socialReach: {
+    total: '',
+    Youtube: '',
+    Facebook: '',
+    Vine: '',
+    Twitter: '',
+    Instagram: '',
+  },
+  earnings: [
+    {
+      id: '',
+      channel_id: '',
+      month: '',
+      gross: '',
+    },
+  ],
+};
+
+const channelDetailsReducer = (data = initialData, { type, payload }) => {
   switch (type) {
     case GET_CHANNEL_INFO:
       return {
