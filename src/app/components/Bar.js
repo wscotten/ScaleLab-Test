@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import BarText from './BarText';
 
-const Bar = ({ topText, bottomText, height, backgroundColor }) =>
-  (<div>
-    <BarText color={backgroundColor} text={topText} />
-    <div
-      style={{
-        width: 30,
-        margin: 'auto',
-        height,
-        backgroundColor,
-      }}
-    />
-    <BarText text={bottomText} />
-  </div>);
+class Bar extends PureComponent {
+  render() {
+    const { topText, bottomText, height, backgroundColor } = this.props;
+    return (
+      <div>
+        <BarText color={backgroundColor} text={topText} />
+        <div
+          style={{
+            width: 30,
+            margin: 'auto',
+            height,
+            backgroundColor,
+          }}
+        />
+        <BarText text={bottomText} />
+      </div>
+    );
+  }
+}
 
 Bar.defaultProps = {
   topText: '',
