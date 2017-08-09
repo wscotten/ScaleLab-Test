@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import './style.css';
 
-const style = ({ putResultStatus }) =>
-  (putResultStatus !== null ?
-    (<div className={'put-result-status-container'}>
-      {putResultStatus
-        ? <Alert bsStyle="success">Success!</Alert>
-        : <Alert bsStyle="danger">Error!</Alert>
-      }
-    </div>)
-  : null);
+class style extends PureComponent {
+  render() {
+    const { putResultStatus } = this.props;
+    return (
+      putResultStatus !== null ?
+        (<div className={'put-result-status-container'}>
+          {putResultStatus
+            ? <Alert bsStyle="success">Success!</Alert>
+            : <Alert bsStyle="danger">Error!</Alert>
+          }
+        </div>)
+      : null
+    );
+  }
+}
 
 style.defaultProps = {
   putResultStatus: null,
