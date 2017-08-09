@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
 import YoutubeLogo from '../../images/YoutubeLogo.png';
@@ -34,23 +34,29 @@ export const numberFormatter = (number) => {
   return number;
 };
 
-const SocialReach = ({ socialReach }) =>
-  (<div className={'social-reach-container'}>
-    <div className={'social-reach-text'}>
-      <h4>Social Reach {numberFormatter(socialReach.total)}</h4>
-      <SocialReachEditButton />
-    </div>
-    <div className={'social-reach-bar-container'}>
-      {Object.keys(logoArray).map(platform =>
-        (<div key={platform} className={'social-reach-bars'}>
-          <div>
-            <img alt="" src={logoArray[platform]} />
-          </div>
-          <p>{numberFormatter(socialReach[platform])}</p>
-        </div>),
-      )}
-    </div>
-  </div>);
+class SocialReach extends PureComponent {
+  render() {
+    const { socialReach } = this.props;
+    return (
+      <div className={'social-reach-container'}>
+        <div className={'social-reach-text'}>
+          <h4>Social Reach {numberFormatter(socialReach.total)}</h4>
+          <SocialReachEditButton />
+        </div>
+        <div className={'social-reach-bar-container'}>
+          {Object.keys(logoArray).map(platform =>
+            (<div key={platform} className={'social-reach-bars'}>
+              <div>
+                <img alt="" src={logoArray[platform]} />
+              </div>
+              <p>{numberFormatter(socialReach[platform])}</p>
+            </div>),
+          )}
+        </div>
+      </div>
+    );
+  }
+}
 
 SocialReach.propTypes = {
   socialReach: PropTypes.shape({

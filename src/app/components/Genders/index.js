@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Bar from '../Bar';
 import './style.css';
 
-const Genders = ({ barColors, genders }) =>
-  (<div className={'genders-container'}>
-    <h4>Genders</h4>
-    <div className={'genders-bar-container'}>
-      {Object.keys(genders).map(gender =>
-        (<Bar
-          key={gender}
-          topText={`${Math.round(genders[gender])}%`}
-          bottomText={gender}
-          height={Math.ceil(genders[gender] > 50 ? 50 : genders[gender])}
-          backgroundColor={barColors[gender]}
-        />),
-      )}
-    </div>
-  </div>);
+class Genders extends PureComponent {
+  render() {
+    const { barColors, genders } = this.props;
+    return (
+      (<div className={'genders-container'}>
+        <h4>Genders</h4>
+        <div className={'genders-bar-container'}>
+          {Object.keys(genders).map(gender =>
+            (<Bar
+              key={gender}
+              topText={`${Math.round(genders[gender])}%`}
+              bottomText={gender}
+              height={Math.ceil(genders[gender] > 50 ? 50 : genders[gender])}
+              backgroundColor={barColors[gender]}
+            />),
+          )}
+        </div>
+      </div>)
+    );
+  }
+}
 
 Genders.propTypes = {
   barColors: PropTypes.shape({
