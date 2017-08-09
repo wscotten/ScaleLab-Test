@@ -5,10 +5,11 @@ import { attemptToPutNewSocialReachInfo } from './actions';
 import './style.css';
 
 class style extends PureComponent {
+  handleClick = () => this.props.submitbuttonClicked(this.props.socialReachModalValues);
   render() {
-    const { attemptingSocialReachPut, socialReachModalValues, submitbuttonClicked } = this.props;
+    const { attemptingSocialReachPut } = this.props;
     return (
-      <button onClick={() => submitbuttonClicked(socialReachModalValues)} className={'modal-button'}>
+      <button onClick={this.handleClick} className={'modal-button'}>
         {attemptingSocialReachPut
           ? <div className="sk-fading-circle">
             <div className="sk-circle1 sk-circle" />

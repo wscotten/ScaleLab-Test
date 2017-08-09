@@ -5,14 +5,14 @@ import { closeSocialReachModal } from '../SocialReachEditButton/actions';
 import './style.css';
 
 class style extends PureComponent {
+  handleClick = () => this.props.closeModalButtonClicked();
   render() {
-    const { closeModalButtonClicked } = this.props;
     return (
       <div
         role="button"
         tabIndex={0}
         className={'close-modal-button'}
-        onClick={() => closeModalButtonClicked()}
+        onClick={this.handleClick}
       >x
       </div>
     );

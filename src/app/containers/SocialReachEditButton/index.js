@@ -5,14 +5,14 @@ import { toggleSocialReachModal } from './actions';
 import './style.css';
 
 class style extends PureComponent {
+  handleClick = () => this.props.socialReachButtonClicked();
   render() {
-    const { socialReachButtonClicked } = this.props;
     return (
       <div
         className={'social-reach-edit-button'}
         role="button"
         tabIndex={0}
-        onClick={() => socialReachButtonClicked()}
+        onClick={this.handleClick}
       >
         <h4>Edit</h4>
       </div>

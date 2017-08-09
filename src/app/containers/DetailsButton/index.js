@@ -5,15 +5,16 @@ import './style.css';
 import { toggleDetailsButton } from './actions';
 
 class style extends PureComponent {
+  handleClick = () => this.props.detailsButtonClicked();
   render() {
-    const { detailsShown, detailsButtonClicked } = this.props;
+    const { detailsShown } = this.props;
     return (
       <div className={'details-button-container'}>
         <div
           role="button"
           tabIndex={0}
           className={'detailsButton'}
-          onClick={() => detailsButtonClicked()}
+          onClick={this.handleClick}
         >Details&nbsp;
           <svg>
             {detailsShown
