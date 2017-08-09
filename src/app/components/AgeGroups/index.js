@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Bar from '../Bar';
 import './style.css';
@@ -12,21 +12,27 @@ const ageGroupConverter = {
   55: '55+',
 };
 
-const AgeGroups = ({ barColors, ageGroups }) =>
-  (<div className={'age-group-container'}>
-    <h4>Age Groups</h4>
-    <div className={'age-group-bar-container'}>
-      {Object.keys(ageGroups).map(ageGroup =>
-        (<Bar
-          key={ageGroup}
-          topText={`${Math.round(ageGroups[ageGroup])}%`}
-          bottomText={ageGroupConverter[ageGroup]}
-          height={Math.ceil(ageGroups[ageGroup] > 50 ? 50 : ageGroups[ageGroup])}
-          backgroundColor={barColors[ageGroup]}
-        />),
-      )}
-    </div>
-  </div>);
+class AgeGroups extends PureComponent {
+  render() {
+    const { barColors, ageGroups } = this.props;
+    return (
+      <div className={'age-group-container'}>
+        <h4>Age Groups</h4>
+        <div className={'age-group-bar-container'}>
+          {Object.keys(ageGroups).map(ageGroup =>
+            (<Bar
+              key={ageGroup}
+              topText={`${Math.round(ageGroups[ageGroup])}%`}
+              bottomText={ageGroupConverter[ageGroup]}
+              height={Math.ceil(ageGroups[ageGroup] > 50 ? 50 : ageGroups[ageGroup])}
+              backgroundColor={barColors[ageGroup]}
+            />),
+          )}
+        </div>
+      </div>
+    );
+  }
+}
 
 AgeGroups.propTypes = {
   barColors: PropTypes.shape({

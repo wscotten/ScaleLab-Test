@@ -23,7 +23,7 @@ class SocialReachInput extends PureComponent {
 
 SocialReachInput.propTypes = {
   modalValueChanged: PropTypes.func.isRequired,
-  value: PropTypes.number,
+  value: PropTypes.number.isRequired,
   platform: PropTypes.string.isRequired,
 };
 

@@ -16,7 +16,7 @@ const socialReachModalReducer = (socialReachModalValues = initialData, { type, p
     case GET_CHANNEL_INFO:
       return extractSocialReachNumbers(payload);
     case UPDATE_SOCIAL_REACH_MODAL:
-      return Object.assign({}, socialReachModalValues, payload);
+      return { ...socialReachModalValues, [payload.platform]: payload.value };
     default:
       return socialReachModalValues;
   }

@@ -56,7 +56,7 @@ const channelDetailsReducer = (data = initialData, { type, payload }) => {
         earnings: payload.earnings.slice(payload.earnings.length - MONTHS_TO_SHOW),
       };
     case PUT_SOCIAL_REACH_INFO_SUCCESS:
-      return Object.assign({}, data, { socialReach: payload });
+      return { ...data, socialReach: payload };
     default:
       return data;
   }
