@@ -1,25 +1,31 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './style.css';
 import { toggleDetailsButton } from './actions';
 
-const style = ({ detailsShown, detailsButtonClicked }) =>
-  (<div className={'details-button-container'}>
-    <div
-      role="button"
-      tabIndex={0}
-      className={'detailsButton'}
-      onClick={() => detailsButtonClicked()}
-    >Details&nbsp;
-      <svg>
-        {detailsShown
-          ? <path d="M0 0 L8 10 L16 0" />
-          : <path d="M0 10 L8 0 L16 10" />
-        }
-      </svg>
-    </div>
-  </div>);
+class style extends PureComponent {
+  render() {
+    const { detailsShown, detailsButtonClicked } = this.props;
+    return (
+      <div className={'details-button-container'}>
+        <div
+          role="button"
+          tabIndex={0}
+          className={'detailsButton'}
+          onClick={() => detailsButtonClicked()}
+        >Details&nbsp;
+          <svg>
+            {detailsShown
+              ? <path d="M0 0 L8 10 L16 0" />
+              : <path d="M0 10 L8 0 L16 10" />
+            }
+          </svg>
+        </div>
+      </div>
+    );
+  }
+}
 
 style.propTypes = {
   detailsShown: PropTypes.bool.isRequired,

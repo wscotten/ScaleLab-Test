@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { toggleSocialReachModal } from './actions';
 import './style.css';
 
-const style = ({ socialReachButtonClicked }) =>
-    (<div
-      className={'social-reach-edit-button'}
-      role="button"
-      tabIndex={0}
-      onClick={() => socialReachButtonClicked()}
-    >
-      <h4>Edit</h4>
-    </div>);
+class style extends PureComponent {
+  render() {
+    const { socialReachButtonClicked } = this.props;
+    return (
+      <div
+        className={'social-reach-edit-button'}
+        role="button"
+        tabIndex={0}
+        onClick={() => socialReachButtonClicked()}
+      >
+        <h4>Edit</h4>
+      </div>
+    );
+  }
+}
 
 style.propTypes = {
   socialReachButtonClicked: PropTypes.func.isRequired,

@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { closeSocialReachModal } from '../SocialReachEditButton/actions';
 import './style.css';
 
-const style = ({ closeModalButtonClicked }) =>
-  (<div
-    role="button"
-    tabIndex={0}
-    className={'close-modal-button'}
-    onClick={() => closeModalButtonClicked()}
-  >x
-  </div>);
+class style extends PureComponent {
+  render() {
+    const { closeModalButtonClicked } = this.props;
+    return (
+      <div
+        role="button"
+        tabIndex={0}
+        className={'close-modal-button'}
+        onClick={() => closeModalButtonClicked()}
+      >x
+      </div>
+    );
+  }
+}
 
 style.propTypes = {
   closeModalButtonClicked: PropTypes.func.isRequired,
