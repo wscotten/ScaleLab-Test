@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import CloseModalButton from '../CloseModalButton';
@@ -11,56 +11,63 @@ import { attemptToPutNewSocialReachInfo } from '../SocialReachModalButton/action
 import SocialReachInput from '../../components/SocialReachInput';
 import './style.css';
 
-const handleClick = ({ target, currentTarget }, closeModalButtonClicked) => {
-  if (target === currentTarget) closeModalButtonClicked();
-};
+class style extends PureComponent {
+  handleClick = (e) => {
+    if (e.target === e.currentTarget) this.props.closeModalButtonClicked();
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.enterKeyPressed(this.props.socialReachModalValues);
+  }
 
-const style = ({
-  editSocialReachModalShown,
-  socialReachModalValues,
-  modalValueChanged,
-  closeModalButtonClicked,
-  enterKeyPressed,
-}) =>
-  (editSocialReachModalShown
-  ? (
-    <div
-      role="button"
-      tabIndex={0}
-      className={'modal-container'}
-      onClick={e => handleClick(e, closeModalButtonClicked)}
-    >
-      <form
-        className={'modal-box'}
-        onSubmit={(e) => { e.preventDefault(); enterKeyPressed(socialReachModalValues); }}
-      >
-        <CloseModalButton />
-        <h3>Social Media Followers</h3>
-        <PutResultStatusBar />
-        <div className={'modal-contents'}>
-          <h3>All</h3>
-          <input
-            type="text"
-            max="100000000"
-            value={socialReachModalValues.total}
-            onChange={value => modalValueChanged('total', value.target.value)}
-          />
+  render() {
+    const {
+      editSocialReachModalShown,
+      socialReachModalValues,
+      modalValueChanged,
+    } = this.props;
+    return (
+      editSocialReachModalShown
+      ? (
+        <div
+          role="button"
+          tabIndex={0}
+          className={'modal-container'}
+          onClick={this.handleClick}
+        >
+          <form
+            className={'modal-box'}
+            onSubmit={this.handleSubmit}
+          >
+            <CloseModalButton />
+            <h3>Social Media Followers</h3>
+            <PutResultStatusBar />
+            <div className={'modal-contents'}>
+              <h3>All</h3>
+              <SocialReachInput
+                modalValueChanged={modalValueChanged}
+                value={socialReachModalValues.total}
+                platform={'total'}
+              />
+            </div>
+            {Object.keys(logoArray).map(platform =>
+              (<div key={platform} className={'modal-contents'}>
+                <img alt="" src={logoArray[platform]} />
+                <SocialReachInput
+                  modalValueChanged={modalValueChanged}
+                  value={socialReachModalValues[platform]}
+                  platform={platform}
+                />
+              </div>),
+            )}
+            <SocialReachModalButton />
+          </form>
         </div>
-        {Object.keys(logoArray).map(platform =>
-          (<div key={platform} className={'modal-contents'}>
-            <img alt="" src={logoArray[platform]} />
-            <SocialReachInput
-              modalValueChanged={modalValueChanged}
-              value={socialReachModalValues[platform]}
-              platform={platform}
-            />
-          </div>),
-        )}
-        <SocialReachModalButton />
-      </form>
-    </div>
-  )
-  : null);
+      )
+      : null
+    );
+  }
+}
 
 style.propTypes = {
   editSocialReachModalShown: PropTypes.bool.isRequired,

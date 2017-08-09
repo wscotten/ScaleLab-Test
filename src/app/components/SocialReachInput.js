@@ -2,11 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 class SocialReachInput extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.update = this.update.bind(this);
-  }
-  update(e) {
+  update = (e) => {
     this.props.modalValueChanged(this.props.platform, e.target.value);
   }
   render() {

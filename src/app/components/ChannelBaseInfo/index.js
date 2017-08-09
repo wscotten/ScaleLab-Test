@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import moment from 'moment';
@@ -32,54 +32,62 @@ const convertTimeToCorrectDate = (time) => {
   return moment(`${dateString[2]}-${dateString[0]}-${realDay}`).format('MMM D, YYYY');
 };
 
-const style = ({ channelBaseInfo }) =>
-  (<div>
-    <div className={'channel-base-info-container'}>
-      <img alt="" src={ProfilePicture} />
+class style extends PureComponent {
+  render() {
+    const { channelBaseInfo } = this.props;
+    return (
       <div>
-        <div className={'channel-name-container'}>
-          <a href={`https://youtube.com/${channelBaseInfo.name}`}>{channelBaseInfo.name}&nbsp;&nbsp;&nbsp;</a>
-          <div
-            className={'linked-status'}
-            style={{ backgroundColor: channelBaseInfo.status === 'linked' ? '#80d324' : 'red' }}
-          >{channelBaseInfo.status}
+        <div className={'channel-base-info-container'}>
+          <img alt="" src={ProfilePicture} />
+          <div>
+            <div className={'channel-name-container'}>
+              <a href={`https://youtube.com/${channelBaseInfo.name}`}>
+                {channelBaseInfo.name}&nbsp;&nbsp;&nbsp;
+              </a>
+              <div
+                className={'linked-status'}
+                style={{ backgroundColor: channelBaseInfo.status === 'linked' ? '#80d324' : 'red' }}
+              >{channelBaseInfo.status}
+              </div>
+              <p>
+                {channelBaseInfo.youtube_channel_id}
+              </p>
+            </div>
+            <div className={'base-channel-youtube-stats-container'}>
+              <div className={'views-subs-videos-container'}>
+                <p><strong>{numberFormatter(channelBaseInfo.total_views)}</strong> Views</p>
+                <p><strong>{numberFormatter(channelBaseInfo.subscribers)}</strong> Subs</p>
+                <p><strong>{numberFormatter(channelBaseInfo.videos)}</strong> Videos</p>
+              </div>
+              <div className={'current-month-views-container'}>
+                <p><strong>{numberFormatter(channelBaseInfo.last_month_views)}</strong><br />
+                  &nbsp;{moment().subtract(1, 'months').format('MMM')} Views
+                </p>
+              </div>
+            </div>
           </div>
-          <p>
-            {channelBaseInfo.youtube_channel_id}
-          </p>
         </div>
-        <div className={'base-channel-youtube-stats-container'}>
-          <div className={'views-subs-videos-container'}>
-            <p><strong>{numberFormatter(channelBaseInfo.total_views)}</strong> Views</p>
-            <p><strong>{numberFormatter(channelBaseInfo.subscribers)}</strong> Subs</p>
-            <p><strong>{numberFormatter(channelBaseInfo.videos)}</strong> Videos</p>
+        <div className={'network-container'}>
+          <div>
+            <p><strong>Network:</strong> {channelBaseInfo.network}</p>
+            <p><strong>Joined:</strong> {convertTimeToCorrectDate(channelBaseInfo.joined_at)}</p>
           </div>
-          <div className={'current-month-views-container'}>
-            <p><strong>{numberFormatter(channelBaseInfo.last_month_views)}</strong><br />
-              &nbsp;{moment().subtract(1, 'months').format('MMM')} Views
+          <div>
+            <p><strong>Owner:</strong> {channelBaseInfo.owner}</p>
+            <p><strong>Category:</strong> {channelBaseInfo.category}</p>
+          </div>
+          <div>
+            <p><strong>Commission:</strong> {channelBaseInfo.commission}%</p>
+            <p>
+              <strong>Country: </strong>
+              <img alt="" src={countryArray[channelBaseInfo.country_id]} />
             </p>
           </div>
         </div>
       </div>
-    </div>
-    <div className={'network-container'}>
-      <div>
-        <p><strong>Network:</strong> {channelBaseInfo.network}</p>
-        <p><strong>Joined:</strong> {convertTimeToCorrectDate(channelBaseInfo.joined_at)}</p>
-      </div>
-      <div>
-        <p><strong>Owner:</strong> {channelBaseInfo.owner}</p>
-        <p><strong>Category:</strong> {channelBaseInfo.category}</p>
-      </div>
-      <div>
-        <p><strong>Commission:</strong> {channelBaseInfo.commission}%</p>
-        <p>
-          <strong>Country: </strong>
-          <img alt="" src={countryArray[channelBaseInfo.country_id]} />
-        </p>
-      </div>
-    </div>
-  </div>);
+    );
+  }
+}
 
 style.propTypes = {
   channelBaseInfo: PropTypes.shape({

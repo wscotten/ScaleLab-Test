@@ -5,9 +5,9 @@
 
   <testsuite name="modal_tests"
     errors="0" failures="0" hostname="" id="" package="modal_tests" skipped="0"
-    tests="2" time="6.039" timestamp="Wed, 09 Aug 2017 01:08:18 GMT">
+    tests="2" time="5.996" timestamp="Wed, 09 Aug 2017 01:24:22 GMT">
   
-    <testcase name="Make sure the modal opens and closes correctly" classname="modal_tests" time="1.953" assertions="5">
+    <testcase name="Make sure the modal opens and closes correctly" classname="modal_tests" time="1.946" assertions="5">
 
     
 
@@ -20,7 +20,7 @@
     
     </testcase>
   
-    <testcase name="Make sure the modal updates properly" classname="modal_tests" time="4.086" assertions="7">
+    <testcase name="Make sure the modal updates properly" classname="modal_tests" time="4.050" assertions="7">
 
     
 
