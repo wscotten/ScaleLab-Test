@@ -4,6 +4,4 @@ node_js:
 
 script:
   - npm start
-
-test:
   - npm test
