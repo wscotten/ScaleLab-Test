@@ -3,5 +3,5 @@ node_js:
   - "7"
 
 script:
-  - npm start
+  - npm start &
   - npm test

@@ -48,6 +48,7 @@
     "build": "react-scripts build",
     "oldtest": "react-scripts test --env=jsdom",
     "test": "mocha mocha/",
+    "e2e": "nightwatch",
     "eject": "react-scripts eject"
   }
 }

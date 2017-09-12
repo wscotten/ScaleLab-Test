@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="modal_tests"
+    errors="0" failures="0" hostname="" id="" package="modal_tests" skipped="0"
+    tests="2" time="5.197" timestamp="Tue, 12 Sep 2017 02:35:51 GMT">
+  
+    <testcase name="Make sure the modal opens and closes correctly" classname="modal_tests" time="1.479" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Make sure the modal updates properly" classname="modal_tests" time="3.718" assertions="7">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
