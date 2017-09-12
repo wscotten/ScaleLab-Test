@@ -3,6 +3,6 @@ node_js:
   - "7"
 
 script:
-  - npm start
-  - & npm test
-  - & npm run e2e
+  - npm start &
+  - npm test &
+  - npm run e2e
