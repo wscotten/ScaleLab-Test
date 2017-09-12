@@ -5,9 +5,9 @@
 
   <testsuite name="details_button"
     errors="0" failures="0" hostname="" id="" package="details_button" skipped="0"
-    tests="1" time="1.505" timestamp="Tue, 12 Sep 2017 02:35:47 GMT">
+    tests="1" time="2.508" timestamp="Tue, 12 Sep 2017 16:34:03 GMT">
   
-    <testcase name="Make sure the details button functions correctly" classname="details_button" time="1.505" assertions="3">
+    <testcase name="Make sure the details button functions correctly" classname="details_button" time="2.508" assertions="3">
 
     
 

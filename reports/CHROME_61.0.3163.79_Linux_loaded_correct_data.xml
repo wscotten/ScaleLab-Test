@@ -5,9 +5,9 @@
 
   <testsuite name="loaded_correct_data"
     errors="0" failures="0" hostname="" id="" package="loaded_correct_data" skipped="0"
-    tests="1" time="2.307" timestamp="Tue, 12 Sep 2017 02:35:49 GMT">
+    tests="1" time="3.336" timestamp="Tue, 12 Sep 2017 16:34:06 GMT">
   
-    <testcase name="Make sure the data is displayed." classname="loaded_correct_data" time="2.307" assertions="54">
+    <testcase name="Make sure the data is displayed." classname="loaded_correct_data" time="3.336" assertions="54">
 
     
 
