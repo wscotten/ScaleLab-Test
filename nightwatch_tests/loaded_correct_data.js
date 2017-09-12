@@ -59,7 +59,7 @@ module.exports = {
         });
       })
       .getText('.current-month-views-container > p', (result) => {
-        browser.assert.equal(result.value, '990k\n Jul Views');
+        browser.assert.equal(result.value, '990k\n Aug Views');
       })
       .elements('css selector', '.network-container > div > p', (elements) => {
         elements.value.forEach((element, i) => {
